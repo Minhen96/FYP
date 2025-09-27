@@ -1,0 +1,252 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Close Button -->
+    <ImageButton
+        android:id="@+id/closeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_margin="5dp"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="Close"
+        android:padding="8dp"
+        android:src="@android:drawable/ic_menu_close_clear_cancel" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_horizontal"
+                android:text="Edit Pet"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivPetImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/circular_border"
+                android:scaleType="centerCrop"
+                android:src="@drawable/add_icon" />
+
+            <!-- Form Fields -->
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:stretchColumns="1">
+
+                <!-- Pet Name -->
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="30dp"
+                        android:text="Pet Name :" />
+
+                    <EditText
+                        android:id="@+id/etPetName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter pet name" />
+                </TableRow>
+
+                <!-- Pet Species -->
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pet Species :" />
+
+                    <EditText
+                        android:id="@+id/etPetSpecies"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter pet species" />
+                </TableRow>
+
+                <!-- Pet Breed -->
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pet Breed :" />
+
+                    <EditText
+                        android:id="@+id/etPetBreed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter pet breed" />
+                </TableRow>
+
+                <!-- Pet Gender -->
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pet Gender :" />
+
+                    <EditText
+                        android:id="@+id/etPetGender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter pet gender" />
+                </TableRow>
+
+                <!-- Pet Age -->
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pet Age :" />
+
+                    <EditText
+                        android:id="@+id/etPetAge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter pet age" />
+                </TableRow>
+
+                <!-- Pet Weight -->
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pet Weight :" />
+
+                    <EditText
+                        android:id="@+id/etPetWeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter pet weight" />
+                </TableRow>
+
+                <!-- Pet Color -->
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pet Color :" />
+
+                    <EditText
+                        android:id="@+id/etPetColor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter pet color" />
+                </TableRow>
+
+                <!-- Pet Date of Birth -->
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Date of Birth :" />
+
+                    <EditText
+                        android:id="@+id/etPetDOB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter date of birth" />
+                </TableRow>
+            </TableLayout>
+
+
+            <!-- Items in File Section -->
+            <LinearLayout
+                android:id="@+id/itemsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/custom_input_address" />
+
+            <!-- Upload File Button -->
+            <RelativeLayout
+                android:id="@+id/uploadFileButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/upload_product_background"
+                android:padding="7dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="1dp"
+                android:layout_marginBottom="7dp">
+
+                <ImageView
+                    android:id="@+id/upload_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@id/upload_button"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/upload_icon" />
+
+                <TextView
+                    android:id="@+id/upload_button"
+                    android:text="Upload Pet File"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#0600AB"
+                    android:textStyle="bold"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <!-- Add Pet Button -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="30dp" >
+
+                <Button
+                    android:id="@+id/btnDeletePet"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:backgroundTint="#C60D0D"
+                    android:layout_marginEnd="10dp"
+                    android:text="Remove"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/btnEditPet"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:backgroundTint="#01CC1C"
+                    android:layout_marginStart="10dp"
+                    android:text="Confirm"
+                    android:textColor="#FFFFFF" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

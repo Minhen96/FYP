@@ -1,0 +1,98 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:backgroundTint="@color/white" >
+
+    <!-- Horizontal Line -->
+    <View
+        android:id="@+id/line"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/profile_circle_border"
+        android:layout_marginVertical="10dp"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/firstRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:layout_marginVertical="8dp"
+        android:text="firstRow"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/secondRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:layout_marginBottom="5dp"
+        android:textSize="17sp"
+        android:text="secondRow" />
+
+    <TextView
+        android:id="@+id/thirdRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:layout_marginBottom="5dp"
+        android:textSize="17sp"
+        android:text="thirdRow" />
+
+    <!-- Horizontal Line -->
+    <View
+        android:id="@+id/line2"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/profile_circle_border"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_gravity="center_horizontal" />
+
+    <!-- Add Pet Button -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginEnd="25dp"
+        android:layout_gravity="end" >
+
+        <TextView
+            android:id="@+id/btnRemove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_input_address"
+            android:drawableStart="@drawable/remove_icon_address"
+            android:drawablePadding="5dp"
+            android:text="Remove"
+            android:paddingVertical="5dp"
+            android:paddingHorizontal="10dp"
+            android:layout_marginEnd="10dp"
+            android:textColor="#7C7C7C" />
+
+        <TextView
+            android:id="@+id/btnEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_input_address"
+            android:drawableStart="@drawable/edit_icon_address"
+            android:drawablePadding="5dp"
+            android:paddingVertical="5dp"
+            android:paddingHorizontal="10dp"
+            android:text="Edit"
+            android:textColor="#7C7C7C" />
+
+    </LinearLayout>
+
+    <!-- Horizontal Line -->
+    <View
+        android:id="@+id/line3"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/profile_circle_border"
+        android:layout_marginVertical="10dp"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>

@@ -1,0 +1,194 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_background_header"
+        android:orientation="horizontal"
+        android:paddingStart="20dp">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:src="@drawable/baony_icon" />
+    </LinearLayout>
+
+    <!-- Footer -->
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:weightSum="4">
+
+        <ImageButton
+            android:id="@+id/homeButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:src="@drawable/home_icon" />
+
+        <ImageButton
+            android:id="@+id/cartButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:src="@drawable/cart_icon" />
+
+        <ImageButton
+            android:id="@+id/chatButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:src="@drawable/chat_icon" />
+
+        <ImageButton
+            android:id="@+id/profileButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:src="@drawable/account_icon_lightgrey" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/chatTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_centerHorizontal="true"
+        android:padding="12dp"
+        android:text="Chat"
+        android:textSize="22sp" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/chatTitle"
+        android:layout_marginTop="2dp"
+        android:background="@color/black" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/line"
+        android:layout_above="@id/detail_bar">
+
+        <LinearLayout
+            android:id="@+id/chatListContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp" />
+
+    </ScrollView>
+
+    <GridLayout
+        android:id="@+id/detail_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/footer"
+        android:columnCount="3"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/asCustomerTab"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:layout_columnWeight="1" >
+
+            <ImageView
+                android:id="@+id/asCustomerChatIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/chat_icon_black" />
+
+            <TextView
+                android:id="@+id/asCustomerTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/asCustomerChatIcon"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="As Customer"
+                android:clickable="true"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/asMerchantTab"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:layout_columnWeight="1" >
+
+            <ImageView
+                android:id="@+id/asMerchantChatIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/chat_icon_black" />
+
+            <TextView
+                android:id="@+id/asMerchantTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/asMerchantChatIcon"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="As Merchant"
+                android:clickable="true"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/notificationTab"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:layout_columnWeight="1" >
+
+            <ImageView
+                android:id="@+id/notificationIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/notification_icon" />
+
+            <TextView
+                android:id="@+id/notificationTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/notificationIcon"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Notification"
+                android:clickable="true"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+    </GridLayout>
+
+
+</RelativeLayout>

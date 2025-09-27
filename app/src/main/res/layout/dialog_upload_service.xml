@@ -1,0 +1,279 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/ivCloseDialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_close_clear_cancel"
+                android:layout_gravity="end"
+                android:padding="10dp"
+                android:contentDescription="Close Dialog" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add New Service"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="-10dp"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+
+            <ImageView
+                android:id="@+id/ivServiceImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/add_icon"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="Service Image" />
+
+            <EditText
+                android:id="@+id/etServiceName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Service Name"
+                android:inputType="text" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etServiceName" >
+                <TextView
+                    android:id="@+id/catText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Category : "
+                    android:textSize="18sp"/>
+                <Spinner
+                    android:id="@+id/spinnerServiceCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_marginVertical="5dp"
+                    android:layout_toEndOf="@id/catText"
+                    android:entries="@array/services"
+                    android:spinnerMode="dropdown" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/etServicePrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Service Price"
+                android:inputType="numberDecimal" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp">
+                <TextView
+                    android:id="@+id/operating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Operating hours : "
+                    android:textSize="18sp"/>
+
+                <EditText
+                    android:id="@+id/etStartHour"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/operating"
+                    android:hint="Start"
+                    android:inputType="textMultiLine" />
+
+                <TextView
+                    android:id="@+id/to"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/etStartHour"
+                    android:text=" to "
+                    android:textSize="18sp"/>
+
+                <EditText
+                    android:id="@+id/etEndHour"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/to"
+                    android:hint="End"
+                    android:inputType="textMultiLine" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/unavailableDaysLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Unavailable Days (Tick) : "
+                android:textSize="18sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <CheckBox
+                    android:id="@+id/mondayCheckbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="Monday"/>
+
+                <CheckBox
+                    android:id="@+id/tuesdayCheckbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="Tuesday"/>
+
+                <CheckBox
+                    android:id="@+id/wednesdayCheckbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wednesday"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/thursdayCheckbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:text="Thursday"/>
+
+                <CheckBox
+                    android:id="@+id/fridayCheckbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:text="Friday"/>
+
+                <CheckBox
+                    android:id="@+id/saturdayCheckbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Saturday"/>
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/sundayCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sunday"/>
+
+            <LinearLayout
+                android:id="@+id/datesBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:paddingHorizontal="10dp" >
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp">
+                    <TextView
+                        android:id="@+id/unavailableDatesLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Unavailable Dates : "
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:id="@+id/selectUnavailableDatesButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:layout_toEndOf="@id/unavailableDatesLabel"
+                        android:background="@drawable/custom_input_address"
+                        android:padding="5dp"
+                        android:text="Select Dates" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/llSelectedDates"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/datesBox" >
+                <TextView
+                    android:id="@+id/locText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Location : "
+                    android:textSize="18sp"/>
+                <Spinner
+                    android:id="@+id/spinnerProductAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_toEndOf="@id/locText"
+                    android:layout_marginVertical="10dp"/>
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/etServiceDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Service Description"
+                android:inputType="textMultiLine"
+                android:lines="3"
+                android:layout_marginBottom="8dp" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="30dp" >
+
+                <Button
+                    android:id="@+id/backBtn"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:backgroundTint="#C60D0D"
+                    android:layout_marginEnd="10dp"
+                    android:text="Cancel"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/confirmBtn"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:backgroundTint="#01CC1C"
+                    android:layout_marginStart="10dp"
+                    android:text="Confirm"
+                    android:textColor="#FFFFFF" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

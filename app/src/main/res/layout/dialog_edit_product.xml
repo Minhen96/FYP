@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+    <ImageView
+        android:id="@+id/ivCloseDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        android:layout_gravity="end"
+        android:padding="10dp"
+        android:contentDescription="Close Dialog" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Product"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="-10dp"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:textSize="20dp"/>
+
+    <ImageView
+        android:id="@+id/ivProductImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/temp_pet_icon"
+        android:scaleType="centerCrop" />
+
+    <EditText
+        android:id="@+id/etProductName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Product Name"
+        android:inputType="text"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/spinnerProductCategory"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_marginVertical="5dp"
+        android:text="Category: "
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:layout_below="@id/etProductName" />
+
+    <EditText
+        android:id="@+id/etProductPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Product Price"
+        android:inputType="numberDecimal"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:id="@+id/etProductStock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Product Stock"
+        android:inputType="number"
+        android:layout_marginBottom="8dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/datesBox" >
+        <TextView
+            android:id="@+id/locText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Location : "
+            android:textSize="18sp"/>
+        <Spinner
+            android:id="@+id/spinnerProductAddress"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_toEndOf="@id/locText"
+            android:layout_marginVertical="5dp"/>
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/etProductDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Product Description"
+        android:inputType="textMultiLine"
+        android:lines="3"
+        android:layout_marginBottom="8dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginVertical="30dp" >
+
+        <Button
+            android:id="@+id/removeBtn"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="#C60D0D"
+            android:layout_marginEnd="10dp"
+            android:text="Remove"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/confirmBtn"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="#01CC1C"
+            android:layout_marginStart="10dp"
+            android:text="Confirm"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

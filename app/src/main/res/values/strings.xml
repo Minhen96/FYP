@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">FYP</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="forgetPassword"><u>Forgot Password?</u></string>
+    <string name="signUp"><u>Sign Up</u></string>
+    <string name="Login"><u>Login</u></string>
+
+    <string-array name="categories_products">
+        <item>Products</item>
+        <item>Food</item>
+        <item>Snacks</item>
+        <item>Toys</item>
+        <item>Clothes</item>
+        <item>Accessories</item>
+        <item>Healthcare</item>
+        <item>Services</item>
+        <item>Grooming</item>
+        <item>Boarding</item>
+        <item>Daycare</item>
+        <item>Training</item>
+        <item>Sitting</item>
+        <item>Walking</item>
+        <item>Vet</item>
+        <item>Adoption</item>
+        <item>Funeral</item>
+    </string-array>
+    <string-array name="products">
+        <item>Food</item>
+        <item>Snacks</item>
+        <item>Toys</item>
+        <item>Clothes</item>
+        <item>Accessories</item>
+        <item>Healthcare</item>
+    </string-array>
+    <string-array name="services">
+        <item>Grooming</item>
+        <item>Boarding</item>
+        <item>Daycare</item>
+        <item>Training</item>
+        <item>Sitting</item>
+        <item>Walking</item>
+        <item>Vet</item>
+        <item>Adoption</item>
+        <item>Funeral</item>
+    </string-array>
+
+</resources>

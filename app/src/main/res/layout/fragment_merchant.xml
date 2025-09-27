@@ -1,0 +1,340 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_background_header"
+        android:orientation="horizontal"
+        android:paddingStart="20dp">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:src="@drawable/baony_icon" />
+    </LinearLayout>
+
+    <!-- Footer -->
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:weightSum="4">
+
+        <ImageButton
+            android:id="@+id/homeButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:src="@drawable/home_icon" />
+
+        <ImageButton
+            android:id="@+id/cartButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:src="@drawable/cart_icon" />
+
+        <ImageButton
+            android:id="@+id/chatButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:src="@drawable/chat_icon" />
+
+        <ImageButton
+            android:id="@+id/profileButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:src="@drawable/account_icon_lightgrey" />
+
+    </LinearLayout>
+
+
+    <!-- ScrollView for the main content -->
+    <ScrollView
+        android:id="@+id/gridScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header"
+        android:layout_above="@id/footer"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- Merchant Profile Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/back_icon_black"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/ivMerchantStore"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:padding="3dp"
+                            android:background="@drawable/circular_border_thin"
+                            android:src="@drawable/account_icon_lightgrey" />
+
+                        <TextView
+                            android:id="@+id/tvMerchantName"
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/ivMerchantStore"
+                            android:layout_centerVertical="true"
+                            android:paddingStart="20dp"
+                            android:text="Merchant store name tes test etst"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/ivEdit"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/edit_icon"
+                            android:padding="4dp"
+                            android:paddingEnd="10dp"/>
+                    </RelativeLayout>
+
+                    <!-- Horizontal Line -->
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginVertical="10dp"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_gravity="center_horizontal" />
+
+
+                    <TextView
+                        android:id="@+id/merchantDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:paddingBottom="40dp"
+                        android:paddingHorizontal="25dp"
+                        android:text="Here will be the description of the merchant..."
+                        android:textSize="16sp"
+                        android:gravity="left" />
+
+                    <TextView
+                        android:id="@+id/manage_address"
+                        android:text="Manage Merchant Address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/custom_input_merchant_box1"
+                        android:padding="9dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginBottom="15dp"
+                        android:textColor="#ffffff"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/current_order"
+                        android:text="Check Current Order"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/custom_input_merchant_box2"
+                        android:padding="9dp"
+                        android:textColor="#ffffff"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/current_appointment"
+                        android:text="Check Upcoming Appointment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/custom_input_merchant_box2"
+                        android:padding="9dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="30dp"
+                        android:textColor="#ffffff"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textAlignment="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/light_grey">
+
+                    <!-- Buttons -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/productsListingButton"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingVertical="10dp"
+                            android:text="Products Listing"
+                            android:textAlignment="center"
+                            android:background="@drawable/custom_input_upload_product_service"
+                            android:textColor="@android:color/white" />
+
+                        <TextView
+                            android:id="@+id/servicesListingButton"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingVertical="10dp"
+                            android:text="Services Listing"
+                            android:background="@drawable/custom_input_upload_product_service_not_select"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/white" />
+                    </LinearLayout>
+
+                    <!-- Horizontal ScrollView for products -->
+                    <HorizontalScrollView
+                        android:id="@+id/productsListingLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <LinearLayout
+                            android:id="@+id/productsListing"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:orientation="horizontal">
+
+                            <!-- Add more product items here -->
+                        </LinearLayout>
+
+                    </HorizontalScrollView>
+
+                    <!-- GridLayout for vertical products -->
+                    <GridLayout
+                        android:id="@+id/productsGridLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:columnCount="3"
+                        android:layout_margin="8dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <!-- Add more product items here -->
+                    </GridLayout>
+
+                    <!-- Show all Products Button -->
+                    <RelativeLayout
+                        android:id="@+id/showProductButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/show_product_background"
+                        android:padding="7dp"
+                        android:layout_marginHorizontal="1dp"
+                        android:layout_marginBottom="7dp">
+
+                        <ImageView
+                            android:id="@+id/show_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toStartOf="@id/show_button"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/right_arrow_icon" />
+
+                        <TextView
+                            android:id="@+id/show_button"
+                            android:text="Show all Existing Products"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:textColor="#A8A9B9"
+                            android:textStyle="bold"
+                            android:textSize="18sp" />
+                    </RelativeLayout>
+
+                    <!-- Upload New Products Button -->
+                    <RelativeLayout
+                        android:id="@+id/uploadProductButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/upload_product_background"
+                        android:padding="7dp"
+                        android:layout_marginHorizontal="1dp"
+                        android:layout_marginBottom="7dp">
+
+                        <ImageView
+                            android:id="@+id/upload_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toStartOf="@id/upload_button"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/upload_icon" />
+
+                        <TextView
+                            android:id="@+id/upload_button"
+                            android:text="Upload New Products"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:textColor="#0600AB"
+                            android:textStyle="bold"
+                            android:textSize="18sp" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Remove Merchant Account Button -->
+            <Button
+                android:id="@+id/removeMerchantAccountButton"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"
+                android:backgroundTint="@android:color/holo_red_dark"
+                android:text="Remove Merchant Account"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/senderImage"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/account_icon_lightgrey" />
+
+    <RelativeLayout
+        android:id="@+id/senderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp" >
+        <TextView
+            android:id="@+id/senderTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="sample sender"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/messageTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/senderTextView"
+            android:layout_marginTop="5dp"
+            android:text="sample message"/>
+    </RelativeLayout>
+
+
+    <!-- Add this View for the unread indicator -->
+    <View
+        android:id="@+id/unreadIndicator"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/unread_indicator"
+        android:visibility="gone" />
+
+</LinearLayout>

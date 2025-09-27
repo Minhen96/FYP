@@ -1,0 +1,227 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_background_header"
+        android:orientation="horizontal"
+        android:paddingStart="20dp">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:src="@drawable/baony_icon" />
+    </LinearLayout>
+
+    <!-- Footer -->
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:weightSum="4">
+
+        <ImageButton
+            android:id="@+id/homeButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:src="@drawable/home_icon" />
+
+        <ImageButton
+            android:id="@+id/cartButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:src="@drawable/cart_icon" />
+
+        <ImageButton
+            android:id="@+id/chatButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:src="@drawable/chat_icon" />
+
+        <ImageButton
+            android:id="@+id/profileButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:src="@drawable/account_icon_lightgrey" />
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@id/header"
+        android:layout_above="@id/footer"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <!-- Profile Background -->
+    <RelativeLayout
+        android:id="@+id/profileBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header">
+
+        <ImageView
+            android:id="@+id/ivProfileBackground"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:src="@drawable/profile_background" />
+
+        <ImageView
+            android:id="@+id/editProfileBackgroundButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignEnd="@+id/ivProfileBackground"
+            android:padding="5dp"
+            android:background="@drawable/circular_border_grey"
+            android:src="@drawable/edit_icon" />
+
+    </RelativeLayout>
+
+    <!-- Horizontal Line -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/profileBackground"
+        android:background="@android:color/darker_gray"
+        android:layout_gravity="center_horizontal" />
+
+    <!-- Profile Image -->
+    <RelativeLayout
+        android:id="@+id/profileImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-50dp"
+        android:elevation="5dp">
+
+        <ImageView
+            android:id="@+id/user_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/circular_border"
+            android:layout_centerInParent="true"
+            android:padding="5dp"
+            android:src="@drawable/empty_profile" />
+
+        <ImageView
+            android:id="@+id/editProfileImageButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="-20dp"
+            android:layout_toEndOf="@id/user_image"
+            android:layout_alignBottom="@id/user_image"
+            android:padding="5dp"
+            android:src="@drawable/edit_icon" />
+
+    </RelativeLayout>
+
+    <!-- Username -->
+    <EditText
+        android:id="@+id/tvUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profileImage"
+        android:layout_gravity="center"
+        android:drawableEnd="@drawable/edit_icon"
+        android:drawablePadding="5dp"
+        android:text="User123"
+        android:textSize="19sp"
+        android:paddingStart="30dp"
+        android:layout_marginTop="10dp"/>
+
+
+    <!-- Menu options -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/tvUsername">
+
+        <TextView
+            android:id="@+id/change_password_button"
+            android:text="Change Password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_input_manage_profile"
+            android:drawableLeft="@drawable/password_icon_black"
+            android:drawablePadding="20dp"
+            android:padding="15dp"
+            android:layout_gravity="center"
+            android:textColor="@color/profile_page_grey"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/manage_address"
+            android:text="Manage Address"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_input_manage_profile"
+            android:drawableLeft="@drawable/house_icon"
+            android:drawablePadding="20dp"
+            android:padding="15dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/profile_page_grey"
+            android:textSize="18sp" />
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp">
+            <TextView
+                    android:id="@+id/backBtn"
+                    android:text="Back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_input_manage_profile_back"
+                    android:drawableLeft="@drawable/back_icon_manage_profile"
+                    android:drawablePadding="10dp"
+                    android:padding="12dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/confirmBtn"
+                    android:text="Confirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/backBtn"
+                    android:background="@drawable/custom_input_manage_profile_confirm"
+                    android:drawableLeft="@drawable/tick_icon"
+                    android:drawablePadding="10dp"
+                    android:padding="12dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

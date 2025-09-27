@@ -1,0 +1,635 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_background_header"
+        android:orientation="horizontal"
+        android:paddingStart="20dp">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:src="@drawable/baony_icon" />
+    </LinearLayout>
+
+    <!-- Footer -->
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:weightSum="4">
+
+        <ImageButton
+            android:id="@+id/homeButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:src="@drawable/home_icon" />
+
+        <ImageButton
+            android:id="@+id/cartButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:src="@drawable/cart_icon" />
+
+        <ImageButton
+            android:id="@+id/chatButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:src="@drawable/chat_icon" />
+
+        <ImageButton
+            android:id="@+id/profileButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:src="@drawable/account_icon_lightgrey" />
+
+    </LinearLayout>
+
+    <!-- ScrollView for the main content -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header"
+        android:layout_above="@id/footer"
+        android:fillViewport="true">
+
+        <LinearLayout
+        android:id="@+id/content"
+        android:layout_below="@id/header"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/homeBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" >
+
+                <SearchView
+                    android:id="@+id/searchView"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:background="@drawable/custom_input_address"
+                    android:iconifiedByDefault="false"
+                    android:queryHint="Search ..."
+                    android:layout_marginHorizontal="50dp"
+                    android:padding="3dp" />
+
+<!--                <RelativeLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_alignParentRight="true" >-->
+<!--                    <ImageView-->
+<!--                        android:id="@+id/search"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="@drawable/custom_background_search"-->
+<!--                        android:src="@drawable/search_icon" />-->
+<!--                    <EditText-->
+<!--                        android:id="@+id/searchEditText"-->
+<!--                        android:layout_width="190dp"-->
+<!--                        android:layout_height="36dp"-->
+<!--                        android:layout_toEndOf="@id/search"-->
+<!--                        android:background="@drawable/custom_input_address"-->
+<!--                        android:padding="5dp"-->
+<!--                        android:hint="Search" />-->
+<!--                </RelativeLayout>-->
+
+<!--                <RelativeLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="20dp"-->
+<!--                    android:layout_centerVertical="true" >-->
+
+<!--                    <Spinner-->
+<!--                        android:id="@+id/sortSpinner"-->
+<!--                        android:layout_width="130dp"-->
+<!--                        android:layout_height="32dp"-->
+<!--                        android:background="@drawable/custom_input_address"-->
+<!--                        android:paddingVertical="5dp"-->
+<!--                        android:text="Sort" />-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_alignEnd="@id/sortSpinner"-->
+<!--                        android:layout_centerVertical="true"-->
+<!--                        android:src="@drawable/drop_down_icon"/>-->
+
+<!--                </RelativeLayout>-->
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/baony_main" />
+
+            <!-- Products Section -->
+            <RelativeLayout
+                android:id="@+id/productSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/custom_category_background" >
+
+                <TextView
+                    android:id="@+id/productTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Products"
+                    android:textSize="18sp"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"/>
+
+                <GridLayout
+                    android:id="@+id/productGrid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/productTitle"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="15dp"
+                    android:columnCount="5" >
+
+                    <!-- Example of an Image Item -->
+                    <RelativeLayout
+                        android:id="@+id/food"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1" >
+
+                        <ImageView
+                            android:id="@+id/imageProductCategory1"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/food_2"
+                            android:layout_centerHorizontal="true"
+                            android:padding="5dp"
+                            android:background="@color/light_yellow"
+                            android:contentDescription="food"
+                            android:layout_margin="5dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/imageProductCategory1"
+                            android:layout_centerHorizontal="true"
+                            android:text="Food" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/snacks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1" >
+
+                        <ImageView
+                            android:id="@+id/imageProductCategory2"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/snack"
+                            android:layout_centerHorizontal="true"
+                            android:padding="5dp"
+                            android:background="@color/light_yellow"
+                            android:contentDescription="Snacks"
+                            android:layout_margin="5dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/imageProductCategory2"
+                            android:layout_centerHorizontal="true"
+                            android:text="Snacks" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/toys"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1" >
+
+                        <ImageView
+                            android:id="@+id/imageProductCategory3"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/toys"
+                            android:layout_centerHorizontal="true"
+                            android:padding="5dp"
+                            android:background="@color/light_yellow"
+                            android:contentDescription="toys"
+                            android:layout_margin="5dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/imageProductCategory3"
+                            android:layout_centerHorizontal="true"
+                            android:text="  Toys  " />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/clothes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1" >
+
+                        <ImageView
+                            android:id="@+id/imageProductCategory4"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/clothes"
+                            android:layout_centerHorizontal="true"
+                            android:padding="1dp"
+                            android:background="@color/light_yellow"
+                            android:contentDescription="clothes"
+                            android:layout_margin="5dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/imageProductCategory4"
+                            android:layout_centerHorizontal="true"
+                            android:text="Clothes" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/accessories"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1" >
+
+                        <ImageView
+                            android:id="@+id/imageProductCategory5"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/accessory"
+                            android:padding="5dp"
+                            android:background="@color/light_yellow"
+                            android:contentDescription="accessories"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/imageProductCategory5"
+                            android:layout_centerHorizontal="true"
+                            android:text="Accessory" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/healthcare"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1" >
+
+                        <ImageView
+                            android:id="@+id/imageProductCategory7"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/pet_pill"
+                            android:background="@color/light_yellow"
+                            android:contentDescription="healthcare"
+                            android:layout_margin="5dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/imageProductCategory7"
+                            android:layout_centerHorizontal="true"
+                            android:text="Healthcare" />
+
+                    </RelativeLayout>
+
+                    <!-- Add more ImageViews here for other services -->
+
+                </GridLayout>
+
+            </RelativeLayout>
+
+            <!-- Services Section -->
+            <RelativeLayout
+                android:id="@+id/serviceSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_category_background" >
+
+                <TextView
+                    android:id="@+id/serviceTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Services"
+                    android:textSize="18sp"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"/>
+
+                <GridLayout
+                    android:id="@+id/serviceGrid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/serviceTitle"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="15dp"
+                    android:columnCount="5" >
+
+                    <!-- Example of an Image Item -->
+                    <RelativeLayout
+                        android:id="@+id/grooming_service"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1" >
+
+                        <ImageView
+                            android:id="@+id/imageCategory1"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/grooming_2"
+                            android:layout_centerHorizontal="true"
+                            android:background="@color/light_yellow"
+                            android:contentDescription="Service"
+                            android:layout_margin="5dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/imageCategory1"
+                            android:layout_centerHorizontal="true"
+                            android:text="Grooming" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/boarding_service"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1" >
+
+                        <ImageView
+                            android:id="@+id/imageCategory2"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/boarding_2"
+                            android:layout_centerHorizontal="true"
+                            android:padding="5dp"
+                            android:background="@color/light_yellow"
+                            android:contentDescription="Service"
+                            android:layout_margin="5dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/imageCategory2"
+                            android:layout_centerHorizontal="true"
+                            android:text="Boarding" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/daycare_service"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1" >
+
+                        <ImageView
+                            android:id="@+id/imageCategory3"
+                            android:layout_width="54dp"
+                            android:layout_height="54dp"
+                            android:src="@drawable/pet_in_love"
+                            android:layout_centerHorizontal="true"
+                            android:padding="5dp"
+                            android:background="@color/light_yellow"
+                            android:contentDescription="Service"
+                            android:layout_margin="3dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/imageCategory3"
+                            android:layout_centerHorizontal="true"
+                            android:text="Daycare" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/training_service"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1" >
+
+                        <ImageView
+                            android:id="@+id/imageCategory4"
+                            android:layout_width="52dp"
+                            android:layout_height="52dp"
+                            android:src="@drawable/training"
+                            android:layout_centerHorizontal="true"
+                            android:background="@color/light_yellow"
+                            android:contentDescription="Service"
+                            android:layout_margin="4dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/imageCategory4"
+                            android:layout_centerHorizontal="true"
+                            android:text="Training" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/sitting_service"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1" >
+
+                        <ImageView
+                            android:id="@+id/imageCategory5"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/sitting"
+                            android:background="@color/light_yellow"
+                            android:contentDescription="Service"
+                            android:layout_margin="5dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/imageCategory5"
+                            android:layout_centerHorizontal="true"
+                            android:text="Sitting" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/walking_service"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1" >
+
+                        <ImageView
+                            android:id="@+id/imageCategory6"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/walking_3"
+                            android:background="@color/light_yellow"
+                            android:contentDescription="Service"
+                            android:layout_margin="5dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/imageCategory6"
+                            android:layout_centerHorizontal="true"
+                            android:text="Walking" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/vet_service"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1" >
+
+                        <ImageView
+                            android:id="@+id/imageCategory7"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/vet"
+                            android:padding="5dp"
+                            android:background="@color/light_yellow"
+                            android:contentDescription="Service"
+                            android:layout_margin="5dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/imageCategory7"
+                            android:layout_centerHorizontal="true"
+                            android:text="Vet" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/adoption_service"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1" >
+
+                        <ImageView
+                            android:id="@+id/imageCategory8"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/adoption_2"
+                            android:background="@color/light_yellow"
+                            android:contentDescription="Service" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/imageCategory8"
+                            android:layout_centerHorizontal="true"
+                            android:text="Adoption" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/funeral_service"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1" >
+
+                        <ImageView
+                            android:id="@+id/imageCategory9"
+                            android:layout_width="54dp"
+                            android:layout_height="54dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/pet_love_2"
+                            android:background="@color/light_yellow"
+                            android:contentDescription="Service"
+                            android:layout_margin="3dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/imageCategory9"
+                            android:layout_centerHorizontal="true"
+                            android:text="Funeral" />
+
+                    </RelativeLayout>
+
+                    <!-- Add more ImageViews here for other services -->
+                </GridLayout>
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_grey"
+                android:orientation="vertical"
+                android:layout_marginTop="30dp" >
+
+                <TextView
+                    android:id="@+id/middleTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Recommendation Products >>"
+                    android:textSize="18sp"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"/>
+
+                <!-- Horizontal ScrollView for products -->
+                <HorizontalScrollView
+                    android:id="@+id/productsListingLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp">
+
+                    <LinearLayout
+                        android:id="@+id/productsListing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:orientation="horizontal">
+
+                        <!-- Add more product items here -->
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

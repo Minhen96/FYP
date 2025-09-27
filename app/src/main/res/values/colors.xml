@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="brown">#514400</color>
+    <color name="profile_page_grey">#595959</color>
+    <color name="profile_page_background_grey">#f4f4f4</color>
+    <color name="profile_circle_border">#808080</color>
+    <color name="red">#FF6C52</color>
+    <color name="light_red">#FFD4CC</color>
+    <color name="out_stock_grey">#FBFBFB</color>
+    <color name="light_grey">#E4E4E4</color>
+    <color name="light_blue">#EAF2FF</color>
+    <color name="blue">#0600AB</color>
+    <color name="light_yellow">#FFFFF1</color>
+    <color name="chat_grey">#D3D3D3</color>
+</resources>

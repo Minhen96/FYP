@@ -1,0 +1,5 @@
+<!-- res/drawable/circular_border.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#335C5C5C"/> <!-- Background color of the image -->
+    <corners android:radius="500dp" /> <!-- Large radius to ensure it's circular -->
+</shape>

@@ -1,0 +1,84 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_marginHorizontal="10dp">
+
+    <ImageView
+        android:id="@+id/ivCloseDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:padding="5dp"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        android:contentDescription="Close" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/ivMerchantImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/house_icon" />
+
+        <EditText
+            android:id="@+id/etMerchantName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/ivMerchantImage"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:hint="Merchant Name"
+            android:inputType="text" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/etMerchantDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_input_address"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:hint="Merchant Description"
+        android:inputType="textMultiLine" />
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp">
+        <TextView
+            android:id="@+id/backBtn"
+            android:text="Back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circular_border_red"
+            android:drawableLeft="@drawable/back_icon_manage_profile"
+            android:drawablePadding="10dp"
+            android:padding="12dp"
+            android:layout_marginEnd="15dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/confirmBtn"
+            android:text="Confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/backBtn"
+            android:background="@drawable/custom_input_manage_profile_confirm"
+            android:drawableLeft="@drawable/tick_icon"
+            android:drawablePadding="10dp"
+            android:padding="12dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+
+</LinearLayout>
